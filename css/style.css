@@ -1,0 +1,161 @@
+/* please dont judge my css */
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: black;
+}
+
+@font-face {
+  font-family: Ginto;
+  src: url("ABCGintoNormalEdu-Regular.otf");
+}
+
+p {
+  font-family: Ginto;
+}
+
+a {
+  font-family: Ginto;
+  color: black;
+  text-decoration: underline;
+}
+
+a:link {
+  text-decoration: underline;
+}
+
+a:hover {
+  color: gray;
+}
+
+#programm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#sketch-container {
+  display: flex;
+  height: 80vh;
+  width: 80vh;
+  touch-action: none;
+}
+
+#controls {
+  display: flex;
+  width: 80vh;
+  margin: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.control {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+}
+
+#upload {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+button {
+  background-color: black;
+  /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: Ginto;
+  padding: 10px;
+  height: 40px;
+}
+
+
+input::file-selector-button {
+  background-color: black;
+  padding: 10px;
+  /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  height: 40px;
+}
+
+input {
+  text-align: center;
+  font-family: Ginto;
+  gap: 5px;
+}
+
+button:hover {
+  background-color: grey;
+}
+
+input::file-selector-button:hover {
+  background-color: grey;
+}
+
+button:active {
+  background-color: darkgrey;
+}
+
+canvas {
+  display: block;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  #sketch-container {
+    height: 85vw;
+    width: 85vw;
+  }
+
+  #controls {
+    width: 85vw;
+  }
+
+  #upload {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  button {
+    margin-left: 0px;
+    margin-bottom: 5px;
+  }
+
+  input {
+    width: 140px;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #programm {
+    flex-direction: row;
+  }
+
+  #controls {
+    height: 80vh;
+  }
+
+  .control {
+    flex-grow: 0;
+  }
+}

@@ -1,0 +1,51 @@
+/* RESET */
+
+/* Box Model, Overflow & Text Size Adjust */
+html {
+    box-sizing: border-box;
+
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+/* Global Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    box-sizing: inherit;
+}
+
+/* Reset Links */
+a {
+    text-decoration: none;
+}
+
+/* Reset Lists */
+ol,
+ul {
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+
+/* Reset Tables */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Prevent Animations */
+@media (prefers-reduced-motion) {
+    * {
+        transition: none !important;
+        animation: none !important;
+        scroll-behavior: auto !important;
+        scroll-snap-type: auto;
+    }
+}

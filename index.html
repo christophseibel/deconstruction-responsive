@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sketch</title>
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+
+  <!-- p5.js -->
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+
+  <!-- matter.js -->
+  <script src="libraries/matter.js"></script>
+  <script src="libraries/matter-objects.js"></script>
+</head>
+
+<body>
+  <div id="programm">
+    <div id="sketch-container"></div>
+    <div id="controls">
+      <div class="control" id="upload">
+        <div id="buttons">
+          <button type="button" onclick="saveResult()">Export your result</button>
+        </div>
+      </div>
+      <div class="control">
+        <p>click, drag and release to deconstruct this image!</p>
+        <p> upload of external images is possible but works best for
+          images with a 1:1 ratio</p>
+        <p>if you made something cool with this, don't be shy and tell me :)</p>
+        <p style="display:inline">image taken from</p>
+        <a
+          href="https://commons.wikimedia.org/wiki/File:Typical_Brutalist_building_with_Coca_Cola_ad_in_Piata_Romana,_Bucarest._21-04-19_-_Gipsywriting.jpg">wikpedia
+          creative commons</a>
+      </div>
+      <div class="control">
+        <p style="display:inline">inspired by</p>
+        <a href="https://www.patrik-huebner.com/">patrik hübner</a>
+        <p style="display:inline">|</p>
+        <p style="display: inline">thanks to</p>
+        <a href="https://lukevan.me/">luke van</a>
+        <p style="display:inline">for help with the image upload</p>
+      </div>
+    </div>
+  </div>
+  <script src="sketch.js"></script>
+</body>
+
+</html>

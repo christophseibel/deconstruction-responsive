@@ -129,6 +129,11 @@ function mouseInScreen() {
   }
 }
 
+function clearOBJ() {
+  Composite.clear(engine.world, true);
+  rectangles = [];
+}
+
 function changeBG() {
   if (BGswitch) {
     BGswitch = false;

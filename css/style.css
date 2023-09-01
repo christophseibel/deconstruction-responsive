@@ -10,11 +10,12 @@ body {
 
 @font-face {
   font-family: Ginto;
-  src: url("../css/fonts/ABCGintoNormalEdu-Regular.otf");
+  src: url("/css/fonts/ABCGintoNordEdu-Regular.otf");
 }
 
 p {
   font-family: Ginto;
+  font-size: 10pt;
 }
 
 a {

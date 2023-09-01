@@ -69,6 +69,7 @@ a:hover {
   align-items: center;
   flex-wrap: wrap;
   gap: 5px;
+  width: auto;
 }
 
 button {
@@ -137,6 +138,11 @@ canvas {
 
   #content {
     width: 85vw;
+    align-items: center;
+  }
+
+  #settings {
+    width: 100%;
   }
 }
 

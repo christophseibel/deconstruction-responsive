@@ -15,11 +15,12 @@ body {
 
 p {
   font-family: Ginto;
-  font-size: 10pt;
+  font-size: 12pt;
 }
 
 a {
   font-family: Ginto;
+  font-size: 12pt;
   color: black;
   text-decoration: underline;
 }
@@ -143,6 +144,14 @@ canvas {
 
   #settings {
     width: 100%;
+  }
+
+  p {
+    font-size: 10pt;
+  }
+
+  a {
+    font-size: 10pt;
   }
 }
 

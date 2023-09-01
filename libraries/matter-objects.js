@@ -51,9 +51,13 @@ class Rectangle {
         canvas.push();
         canvas.rectMode(CENTER);
         canvas.imageMode(CENTER);
+        canvas.noFill();
+        canvas.strokeWeight(1);
+        canvas.stroke(0);
         canvas.translate(pos.x, pos.y);
         canvas.rotate(angle);
         canvas.image(this.img, 0, 0, this.w, this.h);
+        canvas.rect(0, 0, this.w, this.h);
         canvas.pop();
     }
 

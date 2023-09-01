@@ -22,13 +22,25 @@
 <body>
   <div id="programm">
     <div id="sketch-container"></div>
-    <div id="controls">
-      <div class="control" id="upload">
-        <div id="buttons">
-          <button type="button" onclick="overlay_on()">Settings</button>
-          <button type="button" onclick="saveResult()">Export your
-            result</button>
+    <div id="content">
+      <div class="control" id="settings">
+        <p>Settings:</p>
+        <button type="button" onclick="changeBG()">
+          <img src="css/data/image.svg" id="setting-image">
+          <img src="css/data/square.svg" id="setting-background" style="display: none;">
+        </button>
+        <div id="color-picker" style="display: none;">
+          <label for="input-color">
+            <img src="css/data/colorpick.svg">
+          </label>
+          <input type="color" id="input-color" name="head" value="#e66465" />
         </div>
+        <div id="image-upload">
+          <label for="file-input">
+            <img src="css/data/upload.svg">
+          </label>
+        </div>
+        <button type="button" onclick="saveResult()"><img src="css/data/download.svg"></button>
       </div>
       <div class="control">
         <p>click, drag and release to deconstruct this image!</p>
@@ -47,19 +59,6 @@
         <p style="display: inline">thanks to</p>
         <a href="https://lukevan.me/">luke van</a>
         <p style="display:inline">for help with the image upload</p>
-      </div>
-    </div>
-  </div>
-
-  <div id="overlay">
-    <div id="window">
-      <div id="topbar">
-        <p id="overlaytitle">Overlay</p>
-        <div class="cross" onclick="overlay_off()">
-          <img src="data/x.svg">
-        </div>
-      </div>
-      <div id="overlaycontent">
       </div>
     </div>
   </div>

@@ -16,7 +16,7 @@ let canvas;
 let containersize;
 
 let background;
-const input = document.querySelector("input");
+let BGswitch = true;
 
 function preload() {
   background = loadImage("construction.jpg");
@@ -31,8 +31,8 @@ function setup() {
   canvas.noFill();
 
   let input = createFileInput(handleFile);
-  input.html("Upload your own image")
-  input.parent("#buttons");
+  input.id("file-input");
+  input.parent("image-upload");
 
   //matter.js
   engine = Engine.create();
@@ -46,7 +46,14 @@ function setup() {
 }
 
 function draw() {
-  canvas.image(background, 0, 0, 800, 800);
+  switch (BGswitch) {
+    case true:
+      canvas.image(background, 0, 0, 800, 800);
+      break;
+    case false:
+      canvas.background(document.getElementById("input-color").value);
+      break;
+  }
   for (let i = 0; i < rectangles.length; i++) {
     rectangles[i].display();
   }
@@ -90,7 +97,7 @@ function mouseReleased() {
     selectionHEIGHT = Math.round(selectionHEIGHT);
 
     let selection = createImage(selectionWIDTH, selectionHEIGHT);
-    selection.copy(canvas, selectionX, selectionY, selectionWIDTH, selectionHEIGHT, 0, 0, selectionWIDTH, selectionHEIGHT);
+    selection.copy(canvas, selectionX + 1, selectionY + 1, selectionWIDTH - 2, selectionHEIGHT - 2, 0, 0, selectionWIDTH, selectionHEIGHT);
     rectangles.push(new Rectangle(selectionX, selectionY, selectionWIDTH, selectionHEIGHT, selection));
     selectionX = 0;
     selectionY = 0;
@@ -122,12 +129,16 @@ function mouseInScreen() {
   }
 }
 
-function overlay_on() {
-  document.getElementById("overlay").style.display = "flex";
-  document.body.style.overflow = "hidden";
-}
-
-function overlay_off() {
-  document.getElementById("overlay").style.display = "none";
-  document.body.style.overflow = "scroll";
+function changeBG() {
+  if (BGswitch) {
+    BGswitch = false;
+    document.getElementById("setting-image").style.display = "none";
+    document.getElementById("color-picker").style.display = "inline";
+    document.getElementById("setting-background").style.display = "inline";
+  } else {
+    BGswitch = true;
+    document.getElementById("setting-image").style.display = "inline";
+    document.getElementById("setting-background").style.display = "none";
+    document.getElementById("color-picker").style.display = "none";
+  }
 }

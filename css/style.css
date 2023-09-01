@@ -10,7 +10,7 @@ body {
 
 @font-face {
   font-family: Ginto;
-  src: url("ABCGintoNormalEdu-Regular.otf");
+  src: url("../css/fonts/ABCGintoNormalEdu-Regular.otf");
 }
 
 p {
@@ -37,6 +37,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 95%;
 }
 
 #sketch-container {
@@ -46,7 +47,7 @@ a:hover {
   touch-action: none;
 }
 
-#controls {
+#content {
   display: flex;
   width: 80vh;
   margin: 10px;
@@ -57,61 +58,69 @@ a:hover {
 
 .control {
   width: 100%;
-  padding: 10px;
   background-color: white;
+  padding: 5px;
 }
 
-#upload {
+#settings {
   display: flex;
   flex-direction: row;
+  align-items: center;
   flex-wrap: wrap;
   gap: 5px;
 }
 
 button {
   background-color: black;
-  /* Green */
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  display: inline;
   font-size: 16px;
   font-family: Ginto;
   padding: 10px;
   height: 40px;
-}
-
-
-input::file-selector-button {
-  background-color: black;
-  padding: 10px;
-  /* Green */
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  height: 40px;
-}
-
-input {
-  text-align: center;
-  font-family: Ginto;
-  gap: 5px;
+  width: 40px;
 }
 
 button:hover {
   background-color: grey;
 }
 
-input::file-selector-button:hover {
+button:active {
+  background-color: darkgrey;
+}
+
+label {
+  background-color: black;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  height: 40px;
+}
+
+label:hover {
   background-color: grey;
 }
 
-button:active {
+label:active {
   background-color: darkgrey;
+}
+
+#image-upload>input {
+  display: none;
+}
+
+#color-picker>input {
+  display: none;
+}
+
+#image-upload {
+  height: 100%;
+}
+
+#color-picker {
+  height: 100%;
 }
 
 canvas {
@@ -125,24 +134,8 @@ canvas {
     width: 85vw;
   }
 
-  #controls {
+  #content {
     width: 85vw;
-  }
-
-  #upload {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-  }
-
-  button {
-    margin-left: 0px;
-    margin-bottom: 5px;
-  }
-
-  input {
-    width: 140px;
-    overflow: hidden;
   }
 }
 
@@ -151,7 +144,7 @@ canvas {
     flex-direction: row;
   }
 
-  #controls {
+  #content {
     height: 80vh;
   }
 
@@ -169,6 +162,11 @@ canvas {
   display: none;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 2;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }
 
 #window {

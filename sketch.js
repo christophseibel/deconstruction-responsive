@@ -50,8 +50,6 @@ function draw() {
   for (let i = 0; i < rectangles.length; i++) {
     rectangles[i].display();
   }
-  stroke(255, 0, 0);
-  strokeWeight(5);
   canvas.rect(selectionX, selectionY, selectionWIDTH, selectionHEIGHT);
   image(canvas, 0, 0, width, height);
 }
@@ -122,4 +120,14 @@ function mouseInScreen() {
       return true;
     }
   }
+}
+
+function overlay_on() {
+  document.getElementById("overlay").style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+
+function overlay_off() {
+  document.getElementById("overlay").style.display = "none";
+  document.body.style.overflow = "scroll";
 }

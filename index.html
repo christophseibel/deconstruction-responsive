@@ -25,7 +25,9 @@
     <div id="controls">
       <div class="control" id="upload">
         <div id="buttons">
-          <button type="button" onclick="saveResult()">Export your result</button>
+          <button type="button" onclick="overlay_on()">Settings</button>
+          <button type="button" onclick="saveResult()">Export your
+            result</button>
         </div>
       </div>
       <div class="control">
@@ -35,7 +37,7 @@
         <p>if you made something cool with this, don't be shy and tell me :)</p>
         <p style="display:inline">image taken from</p>
         <a
-          href="https://commons.wikimedia.org/wiki/File:Typical_Brutalist_building_with_Coca_Cola_ad_in_Piata_Romana,_Bucarest._21-04-19_-_Gipsywriting.jpg">wikpedia
+          href="https://commons.wikimedia.org/wiki/File:Typical_Brutalist_building_with_Coca_Cola_ad_in_Piata_Romana,_Bucarest._21-04-19_-_Gipsywriting.jpg">wikipedia
           creative commons</a>
       </div>
       <div class="control">
@@ -48,6 +50,20 @@
       </div>
     </div>
   </div>
+
+  <div id="overlay">
+    <div id="window">
+      <div id="topbar">
+        <p id="overlaytitle">Overlay</p>
+        <div class="cross" onclick="overlay_off()">
+          <img src="data/x.svg">
+        </div>
+      </div>
+      <div id="overlaycontent">
+      </div>
+    </div>
+  </div>
+
   <script src="sketch.js"></script>
 </body>
 

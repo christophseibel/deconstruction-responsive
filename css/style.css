@@ -61,7 +61,8 @@ a:hover {
 .control {
   width: 100%;
   background-color: white;
-  padding: 5px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 #settings {

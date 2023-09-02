@@ -148,6 +148,6 @@ function changeBG() {
   }
 }
 
-function getFile() {
-  document.getElementById("input-file").click();
+function clickInput(id) {
+  document.getElementById(id).click();
 }

@@ -80,6 +80,7 @@ button {
   padding: 10px;
   height: 40px;
   width: 40px;
+  cursor: pointer;
 }
 
 button:hover {
@@ -96,10 +97,9 @@ input[type="color"] {
   -webkit-appearance: none;
   background: none;
   border: 0;
-  cursor: pointer;
-  height: 40px;
-  padding: 0;
   width: 40px;
+  height: 40px;
+  cursor: pointer;
 }
 
 ::-webkit-color-swatch-wrapper {
@@ -116,7 +116,7 @@ input[type="color"] {
   border: 0;
 }
 
-#yourBtn {
+.yourBtn {
   position: inline;
   width: 40px;
   height: 40px;
@@ -125,7 +125,7 @@ input[type="color"] {
   cursor: pointer;
 }
 
-#yourBtn:hover {
+.yourBtn:hover {
   background-color: grey;
 }
 

@@ -76,8 +76,6 @@ a:hover {
 button {
   background-color: black;
   display: inline;
-  font-size: 16px;
-  font-family: Ginto;
   padding: 10px;
   height: 40px;
   width: 40px;
@@ -91,31 +89,43 @@ button:active {
   background-color: darkgrey;
 }
 
-label {
-  background-color: black;
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px;
+input[type="color"] {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
   height: 40px;
+  padding: 0;
+  width: 40px;
 }
 
-label:hover {
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+::-webkit-color-swatch {
+  border: 0;
+  border-radius: 0;
+}
+
+::-moz-color-swatch,
+::-moz-focus-inner {
+  border: 0;
+}
+
+#yourBtn {
+  position: inline;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  background-color: black;
+  cursor: pointer;
+}
+
+#yourBtn:hover {
   background-color: grey;
-}
-
-label:active {
-  background-color: darkgrey;
-}
-
-#image-upload>input {
-  display: none;
-}
-
-#color-picker>input {
-  display: none;
 }
 
 #image-upload {

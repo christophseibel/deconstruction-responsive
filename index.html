@@ -32,18 +32,12 @@
           <img src="css/data/image.svg" id="setting-image">
           <img src="css/data/square.svg" id="setting-background" style="display: none;">
         </button>
-        <div id="color-picker" style="display: none;">
-          <label for="input-color">
-            <img src="css/data/colorpick.svg">
-          </label>
-          <input type="color" id="input-color" name="head" value="#e66465" />
-        </div>
-        <div id="image-upload">
-          <label for="file-input">
-            <img src="css/data/upload.svg">
-          </label>
-        </div>
+        <input type="color" id="input-color" name="head" value="#e66465" style="display: none;">
         <button type="button" onclick="saveResult()"><img src="css/data/download.svg"></button>
+        <form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
+          <div id="yourBtn" onclick="getFile()"><img src="css/data/upload.svg"></div>
+          <div style='height: 0px;width: 0px; overflow:hidden;' id="upload"></div>
+        </form>
       </div>
       <div class="control">
         <p>click, drag and release to deconstruct this image!</p>

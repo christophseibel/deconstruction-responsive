@@ -31,8 +31,8 @@ function setup() {
   canvas.noFill();
 
   let input = createFileInput(handleFile);
-  input.id("file-input");
-  input.parent("image-upload");
+  input.id("input-file");
+  input.parent("upload");
 
   //matter.js
   engine = Engine.create();
@@ -138,12 +138,16 @@ function changeBG() {
   if (BGswitch) {
     BGswitch = false;
     document.getElementById("setting-image").style.display = "none";
-    document.getElementById("color-picker").style.display = "inline";
     document.getElementById("setting-background").style.display = "inline";
+    document.getElementById("input-color").style.display = "inline";
   } else {
     BGswitch = true;
     document.getElementById("setting-image").style.display = "inline";
     document.getElementById("setting-background").style.display = "none";
-    document.getElementById("color-picker").style.display = "none";
+    document.getElementById("input-color").style.display = "none";
   }
+}
+
+function getFile() {
+  document.getElementById("input-file").click();
 }

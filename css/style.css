@@ -35,7 +35,7 @@ a:hover {
 
 #programm {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -52,6 +52,7 @@ a:hover {
 #content {
   display: flex;
   width: 80vh;
+  height: 80vh;
   margin: 10px;
   flex-direction: column;
   align-items: flex-start;
@@ -164,19 +165,13 @@ canvas {
   a {
     font-size: 10pt;
   }
-}
 
-@media only screen and (min-width: 1000px) {
   #programm {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   #content {
-    height: 80vh;
-  }
-
-  .control {
-    flex-grow: 0;
+    height: auto;
   }
 }
 
